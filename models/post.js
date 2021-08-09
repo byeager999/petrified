@@ -1,17 +1,28 @@
 module.exports = function(sequelize, DataTypes) {
     var Post = sequelize.define("Post", {
+        lostFoundIndicator: {
+            type: DataTypes.BOOLEAN,
+            allowNull: true
+        },
         petName: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
                 len: [1]
             }
-        },
+        },        
         petType: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
                 len: [1]
+            }
+        },
+        description: {
+            type: DataTypes.TEXT,
+            allowNull: false,
+            validate: {
+                len: [1, 240]
             }
         },
         location: {
