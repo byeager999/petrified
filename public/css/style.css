@@ -1,0 +1,20 @@
+#jumboPhoto {
+    opacity: 0.3;
+}
+.container {
+    position: relative;
+    text-align: center;
+  }
+ 
+.image-elements {
+    position: absolute;
+    bottom: 75px;
+    left: 25px;
+}
+.form-select {
+    margin-bottom: 20px
+}
+#formCheck {
+    margin-bottom: 20px
+
+}

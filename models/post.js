@@ -14,7 +14,7 @@ module.exports = function(sequelize, DataTypes) {
                 len: [1]
             }
         },
-        lastSeen: {
+        location: {
             type: DataTypes.TEXT,
             allowNull: false,
             validate: {

@@ -1,1 +1,207 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PETrified</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container">
+
+
+        <img src="./images/PETrified_main_image.jpg" class="img-fluid" id="jumboPhoto" alt="...">
+
+        <div class="image-elements">
+            <h1 class="display-4" id="jumboFont">PETrified</h1>
+            <p class="lead" class="jumboFont">Post and Search for your Lost Loved Ones</p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#search-modal">
+                Search for a Pet
+            </button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add-modal">
+                Add a Pet
+            </button>
+        </div>
+
+
+
+    </div>
+    <!-- Search Modal -->
+    <div class="modal fade" id="search-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Search for your Pet</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="formControlInput1" class="form-label">Pet Name:</label>
+                        <input type="text" class="form-control" id="petName" placeholder="Fido">
+                    </div>
+                    <label for="formControlInput1" class="form-label">Pet Type:</label>
+                    <select class="form-select" aria-label="Default select example" id="petType">
+                        <option selected>Select pet type</option>
+                        <option value="1" name="dog">Dog</option>
+                        <option value="2" name="cat">Cat</option>
+                        <option value="3" name="other">Other</option>
+                    </select>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea6" class="form-label">Description:</label>
+                        <textarea class="form-control" id="description" rows="3"
+                            placeholder="black cat with white on its chest"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea6" class="form-label">Last Seen or Found Near:</label>
+                        <textarea class="form-control" id="location" rows="3"
+                            placeholder="Corner of Main and 1st"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="formControlInput4" class="form-label">Your Name:</label>
+                        <input type="text" class="form-control" id="contactName" placeholder="First Last">
+                    </div>
+                    <div class="mb-3">
+                        <label for="formControlInput4" class="form-label">Your Phone Number:</label>
+                        <input type="text" class="form-control" id="contactNumber" placeholder="555-555-5555">
+                    </div>
+                    <div class="mb-3">
+                        <label for="formControlInput5" class="form-label">Email Address:</label>
+                        <input type="email" class="form-control" id="contactEmail" placeholder="name@example.com">
+                    </div>
+                    <label for="formControlInput6" class="form-label">Add a Picture:</label>
+
+                    <div class="input-group">
+                        <input type="file" class="form-control" id="inputGroupFile04"
+                            aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                        <button class="btn btn-outline-secondary" type="button"
+                            id="inputGroupFileAddon04">Upload</button>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Search</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Modal -->
+    <div class="modal fade" id="add-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addModalLabel">Add a Pet</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="lostFoundIndicator">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="lostFoundIndicator"
+                                id="lostPetIndicator">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Lost Pet
+                            </label>
+                        </div>
+                        <div class="form-check" id="formCheck">
+                            <input class="form-check-input" type="radio" name="lostFoundIndicator"
+                                id="foundPetIndicator">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Found Pet
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="formControlInput1" class="form-label">Pet Name:</label>
+                        <input type="text" class="form-control" id="petName" placeholder="Fido">
+                    </div>
+                    <label for="formControlInput1" class="form-label">Pet Type:</label>
+                    <select class="form-select" aria-label="Default select example" id="petType">
+                        <option selected>Select pet type</option>
+                        <option value="1" name="dog">Dog</option>
+                        <option value="2" name="cat">Cat</option>
+                        <option value="3" name="other">Other</option>
+                    </select>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea6" class="form-label">Description:</label>
+                        <textarea class="form-control" id="description" rows="3"
+                            placeholder="black cat with white on its chest"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea6" class="form-label">Last Seen or Found Near:</label>
+                        <textarea class="form-control" id="location" rows="3"
+                            placeholder="Corner of Main and 1st"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="formControlInput4" class="form-label">Your Name:</label>
+                        <input type="text" class="form-control" id="contactName" placeholder="First Last">
+                    </div>
+                    <div class="mb-3">
+                        <label for="formControlInput4" class="form-label">Your Phone Number:</label>
+                        <input type="text" class="form-control" id="contactNumber" placeholder="555-555-5555">
+                    </div>
+                    <div class="mb-3">
+                        <label for="formControlInput5" class="form-label">Email Address:</label>
+                        <input type="email" class="form-control" id="contactEmail" placeholder="name@example.com">
+                    </div>
+                    <label for="formControlInput6" class="form-label">Add a Picture:</label>
+
+                    <div class="input-group">
+                        <input type="file" class="form-control" id="inputGroupFile04"
+                            aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                        <button class="btn btn-outline-secondary" type="button"
+                            id="inputGroupFileAddon04">Upload</button>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"
+                        data-bs-dismiss="modal">Add Pet</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Add pet success modal -->
+    <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+        tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalToggleLabel2">Your pet has been saved in our database</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Please check our "Search for a Pet" page to see if your pet has been found!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
